@@ -1,6 +1,9 @@
 alert("Hello javascript");
 oFragmentSupplier: null,
-oFilter : function(){
+selectedFieldId: null,
+oFilter : function(oEvent){
+
+  this.selectedFieldId = oEvent.getSource().getId();
   if(!thisofragmentSupplier){
     this.oFragmentSupplier = new sap.ui.xmlfragment("ibm.fin.ar.fragments.popup");
     this.getView().addDependent(this.oFragmentSupplier);
