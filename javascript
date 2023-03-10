@@ -18,9 +18,15 @@ oFilter : function(oEvent){
   
   });
   
-  this.oFragmentSupplier.attachConfirm(this.onConfirm());
+  this.oFragmentSupplier.attachConfirm(this.onConfirm).bind(this);
   }
   this.oFragmentSupplier.open();
-  
+}
+
+onConfirm: function(oEvent){
+
+var selectedItem = oEvent.getParameter("selectedItem");
+var citySelected = oEvent.getLabel();
+sap.ui.getCore().byId(this.selectedFieldId).setValue(citySelected);
 
 }
