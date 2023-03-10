@@ -17,6 +17,8 @@ oFilter : function(oEvent){
      })
   
   });
+  
+  this.oFragmentSupplier.attachConfirm(this.onConfirm());
   }
   this.oFragmentSupplier.open();
   
