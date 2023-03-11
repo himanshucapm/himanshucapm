@@ -8,10 +8,38 @@
     "config": {
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
-        "viewPath": "ibm.fin.ar.View"
+        "viewPath": "ibm.fin.ar.View",
+        "controlId": "myApp"
     },
-    "routes": [],
-    "targets": {}
+    "routes": [
+    {
+        "pattern" : "",
+        "name" : "master",
+        "target": ["donald"]
+    },
+    {
+      "pattern": "empty",
+      "name": "empty",
+      "target": ["donald", "trumph"]
+    
+    }
+    
+    
+    ],
+    "targets": {
+      "donald": {
+          "viewName" : "View1",
+          "viewId" : "idMaster",
+          "controlAggregation":"masterPages"
+      },
+      "trumph": {
+          "viewName" : "Empty",
+          "viewId" : "idEmpty",
+          "controlAggregation":"detailPages"
+      
+      }
+      
+    }
   
   
   }
