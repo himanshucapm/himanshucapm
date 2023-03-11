@@ -1,0 +1,20 @@
+"sap.ui5": {
+  "rootView": {
+    "viewName": "ibm.fin.ar.view.App",
+    "type": "XML",
+    "id": "idApp"
+  },
+  "routing":{
+    "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "ibm.fin.ar.View"
+    },
+    "routes": [],
+    "targets": {}
+  
+  
+  }
+
+
+}
