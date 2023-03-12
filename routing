@@ -24,7 +24,7 @@
     
     },
     {
-      "pattern": "product/{id}",
+      "pattern": "product/{fruitId}",
       "name": "detail",
       "target": ["master", "detail"]
     
