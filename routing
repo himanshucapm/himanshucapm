@@ -15,26 +15,38 @@
     {
         "pattern" : "",
         "name" : "master",
-        "target": ["donald"]
+        "target": ["master"]
     },
     {
       "pattern": "empty",
       "name": "empty",
-      "target": ["donald", "trumph"]
+      "target": ["master", "empty"]
+    
+    },
+    {
+      "pattern": "product/{id}",
+      "name": "detail",
+      "target": ["master", "detail"]
     
     }
     
     
     ],
     "targets": {
-      "donald": {
+      "master": {
           "viewName" : "View1",
           "viewId" : "idMaster",
           "controlAggregation":"masterPages"
       },
-      "trumph": {
+      "empty": {
           "viewName" : "Empty",
           "viewId" : "idEmpty",
+          "controlAggregation":"detailPages"
+      
+      },
+      "detail": {
+          "viewName" : "View2",
+          "viewId" : "idView2",
           "controlAggregation":"detailPages"
       
       }
