@@ -4,7 +4,13 @@ this.oRouter = this.getOwnerComponent().getRouter();
 
 }
 
-onItemPress: function(){
+onItemPress: function(oEvent){
 
-this.oRouter.navTo("detail");
+var sPath = oEvent.getParameter("listItem").getBindingContextPath();
+
+var indexOfFruit = sPath.split("/")[sPath.split("/").length - 1];
+this.oRouter.navTo("detail",{
+  fruitId : indexOfFruit
+
+});
 }
